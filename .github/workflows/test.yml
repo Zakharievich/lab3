@@ -19,14 +19,11 @@ jobs:
       - name: Install PyTest
         run: pip install pytest
         
-      - name: Install Coverage
-        run: pip install coverage
-        
-      - name: Coverage test math-function
-        run: coverage run test_function.py
+      - name: Install pytest-cov
+        run: pip install pytest-cov
         
       - name: Coverage report
-        run: coverage report
+        run: pytest --cov=./
 
       - name: Test with pytest math-function
         run: pytest -vs ./test_function.py
