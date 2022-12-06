@@ -13,14 +13,14 @@ jobs:
         with: 
           python-version: '3.9'
           
-      - name: Install pytest, pytest-cov, tasks
+      - name: Install pytest, coverage, tasks
         run:
           python -m pip install --upgrade pip
           pip install pytest
-          pip install pytest-cov
+          pip install coverage
           pip instal tasks
 
       - name: Test with pytest math-function
         run:
           pytest -vs ./function.py
-          pytest --cov=lab3
+          coverage ./function.py
