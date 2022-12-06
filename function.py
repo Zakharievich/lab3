@@ -4,6 +4,23 @@
 
 import math
 
+#--- Test x2 --------------
+def test_x2_null():
+   res = calc_x2(0)
+   assert len(res) == 1
+   assert res == [0]
+
+def test_x2_positive():
+   res = calc_x2(10)
+   assert len(res) == 1
+   assert res == [100]
+
+def test_x2_negative():
+   res = calc_x2(-10)
+   assert len(res) == 1
+   assert res == [100]
+#-------------------------
+   
 def calc_x2(x):
     return [x**2]
 
