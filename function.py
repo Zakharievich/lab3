@@ -40,7 +40,7 @@ def test_cos_more():
 
 #--- Test exp ------------
 def test_e_null():
-   res = calc_x2(0)
+   res = calc_e(0)
    assert len(res) == 1
    assert res == [1.0]
 
@@ -60,6 +60,25 @@ def test_e_more_error():
         pass
     else:
         print("test_e_more_error: Result too large")
+        assert False
+#-------------------------
+
+#--- Test function ------------
+def test_func_type_false():
+    res = show_result(calc_x2(0), calc_cos(0), calc_e(0))
+    assert type(res) != str
+
+def test_func_type_true():
+    res = show_result(calc_x2(700), calc_cos(700), calc_e(700))
+    assert type(res) == float
+
+def test_func_error():
+    try:
+        res = show_result(calc_x2(-700), calc_cos(-700), calc_e(-700))
+    except OverflowError as err:
+        pass
+    else:
+        print("test_func_error: Result too large")
         assert False
 #-------------------------
    
