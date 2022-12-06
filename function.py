@@ -3,6 +3,7 @@
 # y = x^2 + cos(x) * e^(-2x)
 
 import math
+import pytest
 
 def calc_x2(x):
     return [x**2]
