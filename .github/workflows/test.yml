@@ -21,12 +21,12 @@ jobs:
         
       - name: Install Coverage
         run: pip install coverage
-
-      - name: Test with pytest math-function
-        run: pytest -vs ./test_function.py
         
       - name: Coverage test math-function
         run: coverage run ./test_function.py
         
       - name: Coverage report
         run: coverage report
+
+      - name: Test with pytest math-function
+        run: pytest -vs ./test_function.py
