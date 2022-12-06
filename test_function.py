@@ -100,7 +100,3 @@ def main(x2, cos, e):
     else:
         return 'Error calc function'
 
-
-if __name__ == '__main__':
-    main()
-
