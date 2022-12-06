@@ -23,7 +23,7 @@ jobs:
         run: pip install coverage
         
       - name: Coverage test math-function
-        run: coverage run ./test_function.py
+        run: coverage run test_function.py
         
       - name: Coverage report
         run: coverage report
