@@ -8,17 +8,34 @@ import math
 def test_x2_null():
    res = calc_x2(0)
    assert len(res) == 1
-   assert res == [0]
+   assert res == [0.0]
 
 def test_x2_positive():
    res = calc_x2(10)
    assert len(res) == 1
-   assert res == [100]
+   assert res == [100.0]
 
 def test_x2_negative():
    res = calc_x2(-10)
    assert len(res) == 1
-   assert res == [100]
+   assert res == [100.0]
+#-------------------------
+
+#--- Test cos ------------
+def test_cos_null():
+   res = calc_x2(0)
+   assert len(res) == 1
+   assert res == [1.0]
+
+def test_cos_less():
+   res = calc_x2(3.14)
+   assert len(res) == 1
+   assert res <= [0.0]
+
+def test_x2_more():
+   res = calc_x2(1000)
+   assert len(res) == 1
+   assert res >= [0.5]
 #-------------------------
    
 def calc_x2(x):
