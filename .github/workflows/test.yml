@@ -13,14 +13,20 @@ jobs:
         with: 
           python-version: '3.9'
           
-      - name: Install pytest, coverage
-        run:
-          python -m pip install --upgrade pip
-          pip install pytest
-          pip install coverage
+      - name: Upgrade PIP
+        run: python -m pip install --upgrade pip
+        
+      - name: Install PyTest
+        run: pip install pytest
+        
+      - name: Install Coverage
+        run: pip install coverage
 
       - name: Test with pytest math-function
-        run:
-          pytest -vs ./function.py
-          coverage run ./function.py
-          coverage report
+        run: pytest -vs ./function.py
+        
+      - name: Coverage test math-function
+        run: coverage run ./function.py
+        
+      - name: Coverage report
+        run: coverage report
