@@ -3,6 +3,7 @@
 # y = x^2 + cos(x) * e^(-2x)
 
 import math
+import pytest
 
 #--- Test x2 --------------
 def test_x2_null():
