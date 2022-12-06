@@ -2,6 +2,11 @@ name: Python Test
 
 on:
   workflow_dispatch:
+    inputs:
+      Name:
+        description: Who to greet
+        required: true
+        default: 'GitHub Actions'
 
 jobs:
   Hello:
