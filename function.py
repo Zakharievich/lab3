@@ -81,7 +81,7 @@ def test_func_error():
         print("test_func_error: Result too large")
         assert False
 #-------------------------
-   
+
 def calc_x2(x):
     return [x**2]
 
@@ -95,9 +95,9 @@ def calc_e(x):
 def show_result(x2, cos, e):
     if (len(x2) > 0) and (len(cos) > 0) and (len(e) > 0):
         f = x2[0] + cos[0]*e[0]
-        print('Rezult function:', f)
+        return f
     else:
-        print('Error calc function')
+        return 'Error calc function'
 
 
 def main():
