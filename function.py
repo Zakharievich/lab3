@@ -66,16 +66,16 @@ def test_e_more_error():
 
 #--- Test function ------------
 def test_func_type_false():
-    res = show_result(calc_x2(0), calc_cos(0), calc_e(0))
+    res = main(calc_x2(0), calc_cos(0), calc_e(0))
     assert type(res) != str
 
 def test_func_type_true():
-    res = show_result(calc_x2(700), calc_cos(700), calc_e(700))
+    res = main(calc_x2(700), calc_cos(700), calc_e(700))
     assert type(res) == float
 
 def test_func_error():
     try:
-        res = show_result(calc_x2(-700), calc_cos(-700), calc_e(-700))
+        res = main(calc_x2(-700), calc_cos(-700), calc_e(-700))
     except OverflowError as err:
         pass
     else:
@@ -103,3 +103,4 @@ def main(x2, cos, e):
 
 if __name__ == '__main__':
     main()
+
