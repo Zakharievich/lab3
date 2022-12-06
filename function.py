@@ -23,19 +23,44 @@ def test_x2_negative():
 
 #--- Test cos ------------
 def test_cos_null():
-   res = calc_x2(0)
+   res = calc_cos(0)
    assert len(res) == 1
    assert res == [1.0]
 
 def test_cos_less():
-   res = calc_x2(3.14)
+   res = calc_cos(3.14)
    assert len(res) == 1
    assert res <= [0.0]
 
-def test_x2_more():
-   res = calc_x2(1000)
+def test_cos_more():
+   res = calc_cos(1000)
    assert len(res) == 1
    assert res >= [0.5]
+#-------------------------
+
+#--- Test exp ------------
+def test_e_null():
+   res = calc_x2(0)
+   assert len(res) == 1
+   assert res == [1.0]
+
+def test_e_arguments():
+    try:
+        res = calc_e("")
+    except TypeError as err:
+        pass
+    else:
+        print("test_e_arguments: Invalid argument is not caught")
+        assert False
+
+def test_e_more_error():
+    try:
+        res = calc_e(-700)
+    except OverflowError as err:
+        pass
+    else:
+        print("test_e_more_error: Result too large")
+        assert False
 #-------------------------
    
 def calc_x2(x):
