@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'python test_function.py'
+                sh 'python test_function.py'
             }
         }
     }
