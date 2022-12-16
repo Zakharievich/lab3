@@ -99,4 +99,3 @@ def main(x2, cos, e):
         return f
     else:
         return 'Error calc function'
-
